@@ -29,5 +29,5 @@ spec:
   source:
     type: Git
     git:
-      uri: 'https://github.com/openshift-examples/tomcat-example'
+      uri: 'https://github.com/kelo-1/openshift_tomcat'
     contextDir: httpd
