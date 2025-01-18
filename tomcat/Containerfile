@@ -24,7 +24,7 @@ EXPOSE 8080/tcp
 EXPOSE 8009/tcp
 
 RUN cd /app/apache-tomcat-10.1.24/webapps/ && \
-    curl -L -O https://tomcat.apache.org/tomcat-7.0-doc/appdev/sample/sample.war
+    curl -L -O https://github.com/kelo-1/openshift_tomcat/tree/main/war/sample.daytrader8.war
 
 USER root
 CMD ["/app/apache-tomcat-10.1.24/bin/catalina.sh", "run"]
