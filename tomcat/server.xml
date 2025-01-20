@@ -44,7 +44,21 @@
               type="org.apache.catalina.UserDatabase"
               description="User database that can be updated and saved"
               factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
-              pathname="conf/tomcat-users.xml" />
+    pathname="conf/tomcat-users.xml" />
+    <Resource name="jdbc/db"
+              global="jdbc/db"
+              auth="Container"
+              type="javax.sql.DataSource"
+              driverClassName="com.tmax.tibero.jdbc.TbDriver"
+              url="jdbc:tibero:thin:@220.90.208.132:8629:tibero"
+              username="cms"
+              password="cms"
+              maxActive="20"
+              maxIdle="20"
+              minIdle="5"
+              maxWait="3000"
+              validationQuery="SELECT 1 FROM DUAL"
+              validationInterval="30000" />
   </GlobalNamingResources>
 
   <!-- A "Service" is a collection of one or more "Connectors" that share
